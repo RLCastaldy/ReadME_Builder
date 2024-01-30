@@ -1,14 +1,51 @@
-// // TODO: Include packages needed for this application
-
-// // TODO: Create a function to write README file
-// function writeToFile(fileName, data) {}
-
-// // TODO: Create a function to initialize app
-// function init() {}
-
-// // Function call to initialize app
-// init();
 const inquirer = require('inquirer');
+const axios = require('axios');
+
+let owner, repo, authorization, filePath, fileContent;
+
+inquirer
+  .prompt([
+    
+    {
+        type: 'input',
+        name: 'owner',
+        message: 'Enter your GitHub Username',
+    },
+
+    {
+        type: 'input',
+        name: 'repo',
+        message: 'Enter the Name of Your Repo',
+    },
+
+    {
+        type: 'input',
+        name: 'authorization',
+        message: 'Enter your GitHub Access Token',
+      },
+    
+    {
+      type: 'input',
+      name: 'filePath',
+      message: 'Enter the file path (e.g., path/to/file.txt):',
+    },
+    {
+      type: 'input',
+      name: 'fileContent',
+      message: 'Enter the file content:',
+    },
+  ])
+  .then((answers) => {
+    owner= answers.owner;
+    repo= answers.repo;
+    authorization= answers.authorization;
+    filePath = answers.filePath;
+    fileContent = answers.fileContent;
+
+    createFile();
+  });
+
+
 
 const questions = [
   {
@@ -73,10 +110,26 @@ const questions = [
   },
 ];
 
-inquirer.prompt(questions)
+async function createFile() {
+    try {
+      const response = await axios.put(`https://api.github.com/repos/${owner}/${repo}/contents/${filePath}`, {
+        message: 'Create file',
+        content: Buffer.from(fileContent).toString('base64')
+      }, {
+        headers: {
+          Authorization: `${authorization}`
+        }
+      });
+  
+      console.log('File created successfully:', response.data);
+    } catch (error) {
+      console.error('Error creating file:', error.response.data);
+    }
+  inquirer.prompt(questions)
   .then(answers => {
     console.log('Answers:', answers);
   })
   .catch(error => {
     console.error('Error:', error);
   });
+}
