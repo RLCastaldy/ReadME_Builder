@@ -1,8 +1,5 @@
 // // TODO: Include packages needed for this application
 
-// // TODO: Create an array of questions for user input
-// const questions = [];
-
 // // TODO: Create a function to write README file
 // function writeToFile(fileName, data) {}
 
@@ -60,7 +57,7 @@ const questions = [
     type: 'checkbox',
     name: 'license',
     message: 'Select your license:',
-    choices: ['Apache', 'MIT', 'Eclipse Public', 'The Unlicense']
+    choices: ['Apache', 'MIT', 'Boost Software', 'Eclipse Public', 'No License',]
   },
 
   {
