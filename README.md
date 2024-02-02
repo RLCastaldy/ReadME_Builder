@@ -41,9 +41,7 @@ None
 ## Questions
 
 <br>
-GitHub Profile:
-<br>
-github.com/RLCastaldy
+[GitHub Profile](github.com/RLCastaldy)
 <br>
 <br>
 I am happy to answer any questions via email.
