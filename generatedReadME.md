@@ -1,5 +1,5 @@
 
-![Static Badge](https://img.shields.io/badge/License-MIT%203.0-black)
+![Static Badge](https://img.shields.io/badge/License-Apache2.0-brightgreen)
 
 # h
 
@@ -26,9 +26,9 @@ h
 
 ## License
   
-A short and simple permissive license with conditions only requiring preservation of copyright and license notices. Licensed works, modifications, and larger works may be distributed under different terms and without source code.
+A permissive license whose main conditions require preservation of copyright and license notices. Contributors provide an express grant of patent rights. Licensed works, modifications, and larger works may be distributed under different terms and without source code.
 
-https://choosealicense.com/licenses/mit/
+http://www.apache.org/licenses/
 
 ## Contributing
 
@@ -40,8 +40,13 @@ h
 
 ## Questions
 
-h
-
-h
-
+<br>
+GitHub Profile:
+<br>
+[GitHub Profile](github.com/RLCastaldy)
+<br>
+<br>
+I am happy to answer any questions via email.
+<br>
+Email: rlcastaldy@gmail.com
 

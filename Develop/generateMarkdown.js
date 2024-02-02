@@ -10,6 +10,10 @@ function renderLicenseBadge(license) {
   if(license==="GNU General Public License"){
     return `![Static Badge](https://img.shields.io/badge/License-GNU%203.0-blue)`
   }
+
+  if(license==="No License"){
+    return ""
+  }
 }
 
 function renderLicenseLink(license) {
@@ -23,6 +27,10 @@ function renderLicenseLink(license) {
 
   if(license==="GNU General Public License"){
     return `https://fsf.org/`
+  }
+
+  if(license==="No License"){
+    return ""
   }
 }
 
@@ -87,9 +95,15 @@ ${data.tests}
 
 ## Questions
 
-${data.username}
-
-${data.email}
+<br>
+GitHub Profile:
+<br>
+github.com/${data.username}
+<br>
+<br>
+I am happy to answer any questions via email.
+<br>
+Email: ${data.email}
 
 `;
 }
