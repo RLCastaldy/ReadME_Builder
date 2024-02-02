@@ -1,51 +1,6 @@
 const inquirer = require('inquirer');
-const axios = require('axios');
-
-let owner, repo, authorization, filePath, fileContent;
-
-inquirer
-  .prompt([
-    
-    {
-        type: 'input',
-        name: 'owner',
-        message: 'Enter your GitHub Username',
-    },
-
-    {
-        type: 'input',
-        name: 'repo',
-        message: 'Enter the Name of Your Repo',
-    },
-
-    {
-        type: 'input',
-        name: 'authorization',
-        message: 'Enter your GitHub Access Token',
-      },
-    
-    {
-      type: 'input',
-      name: 'filePath',
-      message: 'Enter the file path (e.g., path/to/file.txt):',
-    },
-    {
-      type: 'input',
-      name: 'fileContent',
-      message: 'Enter the file content:',
-    },
-  ])
-  .then((answers) => {
-    owner= answers.owner;
-    repo= answers.repo;
-    authorization= answers.authorization;
-    filePath = answers.filePath;
-    fileContent = answers.fileContent;
-
-    createFile();
-  });
-
-
+const generateMarkdown = require('./Develop/generateMarkdown');
+const fs = require ('fs');
 
 const questions = [
   {
@@ -62,39 +17,33 @@ const questions = [
 
   {
     type: 'input',
-    name: 'installation instructions',
+    name: 'installation',
     message: 'Instructions for Installation'
   },
 
   {
     type: 'input',
-    name: 'usage information',
+    name: 'usage',
     message: 'Usage Information'
   },
 
   {
     type: 'input',
-    name: 'contriution guidelines',
+    name: 'contributions',
     message: 'Contribution Guidelines'
   },
 
   {
     type: 'input',
-    name: 'contriution guidelines',
-    message: 'Contribution Guidelines'
-  },
-
-  {
-    type: 'input',
-    name: 'test instructions',
+    name: 'tests',
     message: 'Test Instructions'
   },
 
   {
-    type: 'checkbox',
+    type: 'list',
     name: 'license',
     message: 'Select your license:',
-    choices: ['Apache', 'MIT', 'Boost Software', 'Eclipse Public', 'No License',]
+    choices: ['Apache', 'MIT', 'GNU General Public License', 'No License']
   },
 
   {
@@ -111,25 +60,17 @@ const questions = [
 ];
 
 async function createFile() {
-    try {
-      const response = await axios.put(`https://api.github.com/repos/${owner}/${repo}/contents/${filePath}`, {
-        message: 'Create file',
-        content: Buffer.from(fileContent).toString('base64')
-      }, {
-        headers: {
-          Authorization: `${authorization}`
-        }
-      });
-  
-      console.log('File created successfully:', response.data);
-    } catch (error) {
-      console.error('Error creating file:', error.response.data);
-    }
+
   inquirer.prompt(questions)
   .then(answers => {
     console.log('Answers:', answers);
+    fs.writeFile("generatedReadME.md",generateMarkdown(answers),error => {
+      if(error) throw (error);
+      console.log('succesfully generated markdown');
+    })
   })
   .catch(error => {
     console.error('Error:', error);
   });
 }
+createFile()
