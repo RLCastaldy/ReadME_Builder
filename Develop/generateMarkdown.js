@@ -101,12 +101,11 @@ ${data.tests}
 
 <br>
 GitHub Profile:
+
+https://github.com/${data.username}
 <br>
-github.com/${data.username}
 <br>
-<br>
-I am happy to answer any questions via email.
-<br>
+I am happy to answer any questions via email.<br>
 Email: ${data.email}
 
 `;

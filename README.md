@@ -42,11 +42,10 @@ None
 
 <br>
 GitHub Profile:
+
+https://github.com/RLCastaldy
 <br>
-github.com/RLCastaldy
 <br>
-<br>
-I am happy to answer any questions via email.
-<br>
+I am happy to answer any questions via email.<br>
 Email: rlcastaldy@gmail.com
 
