@@ -1,6 +1,5 @@
 
-![Static Badge](https://img.shields.io/badge/License-Apache2.0-brightgreen)
-    
+![Static Badge](https://img.shields.io/badge/License-MIT%203.0-black)
 
 # h
 
@@ -13,7 +12,7 @@ h
 - [Installation](#installation)
 - [Usage](#usage)
 - [License](#license)
-- [Credits](#credits)
+- [Contributing](#contributing)
 - [Tests](#tests)
 - [Questions](#questions)
 
@@ -27,7 +26,9 @@ h
 
 ## License
   
-A permissive license whose main conditions require preservation of copyright and license notices. Contributors provide an express grant of patent rights. Licensed works, modifications, and larger works may be distributed under different terms and without source code.
+A short and simple permissive license with conditions only requiring preservation of copyright and license notices. Licensed works, modifications, and larger works may be distributed under different terms and without source code.
+
+https://choosealicense.com/licenses/mit/
 
 ## Contributing
 
@@ -38,5 +39,9 @@ h
 h
 
 ## Questions
+
+h
+
+h
 
 
