@@ -1,7 +1,9 @@
+// variables to allow frameworks
 const inquirer = require('inquirer');
 const generateMarkdown = require('./Develop/generateMarkdown');
 const fs = require ('fs');
 
+// variable to store answers for document
 const questions = [
   {
     type: 'input',
@@ -59,6 +61,7 @@ const questions = [
   },
 ];
 
+// function to initiate app and apply answers to generateMarkdown
 async function createFile() {
 
   inquirer.prompt(questions)
@@ -73,4 +76,6 @@ async function createFile() {
     console.error('Error:', error);
   });
 }
+
+// call to run function
 createFile()

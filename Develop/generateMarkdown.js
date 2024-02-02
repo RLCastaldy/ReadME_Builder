@@ -1,3 +1,4 @@
+//function to apply license badges
 function renderLicenseBadge(license) {
   if(license==="Apache"){
     return `![Static Badge](https://img.shields.io/badge/License-Apache2.0-brightgreen)`
@@ -16,6 +17,7 @@ function renderLicenseBadge(license) {
   }
 }
 
+// function to apply license link
 function renderLicenseLink(license) {
   if(license==="Apache"){
     return `http://www.apache.org/licenses/`
@@ -34,6 +36,7 @@ function renderLicenseLink(license) {
   }
 }
 
+// function to apply license description
 function renderLicenseSection(license) {
   if(license==="Apache"){
     return `A permissive license whose main conditions require preservation of copyright and license notices. Contributors provide an express grant of patent rights. Licensed works, modifications, and larger works may be distributed under different terms and without source code.`
@@ -52,6 +55,7 @@ function renderLicenseSection(license) {
   }
 }
 
+// function to print text on ReadME
 function generateMarkdown(data) {
   return `
 ${renderLicenseBadge(data.license)}
