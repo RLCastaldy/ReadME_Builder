@@ -1,11 +1,11 @@
 
-![Static Badge](https://img.shields.io/badge/License-Apache2.0-brightgreen)
+![Static Badge](https://img.shields.io/badge/License-MIT%203.0-black)
 
-# h
+# ReadMe Bulder
 
 ## Description
 
-h
+A tool for quickly building professional ReadME files.
 
 ## Table of Contents
 
@@ -18,32 +18,32 @@ h
 
 ## Installation
 
-h
+No installation needed
 
 ## Usage
 
-h
+Inact Node on the index.js file then answer the promted questions to creat your ReadME file.
 
 ## License
   
-A permissive license whose main conditions require preservation of copyright and license notices. Contributors provide an express grant of patent rights. Licensed works, modifications, and larger works may be distributed under different terms and without source code.
+A short and simple permissive license with conditions only requiring preservation of copyright and license notices. Licensed works, modifications, and larger works may be distributed under different terms and without source code.
 
-http://www.apache.org/licenses/
+https://choosealicense.com/licenses/mit/
 
 ## Contributing
 
-h
+None
 
 ## Tests
 
-h
+None
 
 ## Questions
 
 <br>
 GitHub Profile:
 <br>
-[GitHub Profile](github.com/RLCastaldy)
+github.com/RLCastaldy
 <br>
 <br>
 I am happy to answer any questions via email.
